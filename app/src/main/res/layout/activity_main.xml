@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    tools:context=".MainActivity">
+
+    <com.baidu.mapapi.map.TextureMapView
+        android:id="@+id/bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/radar_header"
+        android:layout_alignParentTop="true">
+    </LinearLayout>
+
+    <FrameLayout android:id="@+id/vgp_center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header">
+
+        <RelativeLayout  android:paddingTop="10dp"
+            android:layout_height="360dp"
+            android:layout_width="fill_parent">
+            <ImageView
+                android:id="@+id/imageview_sweep"
+                android:layout_marginLeft ="35dp"
+                android:layout_marginTop ="60dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:src="@drawable/radar_sweep" />
+        </RelativeLayout>
+        <RelativeLayout android:paddingTop="10dp"
+            android:background="@drawable/centre_radar"
+            android:layout_width="fill_parent"
+            android:layout_height="470dp">
+            <Button android:id="@+id/btn_locate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_locate_def"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true" />
+
+            <ToggleButton android:id="@+id/btn_refresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_refresh"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:textOff="" android:textOn="" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <RelativeLayout android:id="@+id/empty_filler"
+        android:layout_width="fill_parent"
+        android:background="@drawable/list_footer"
+        android:layout_height="fill_parent"
+        android:layout_alignTop="@+id/vgp_footer" />
+
+    <RelativeLayout android:id="@+id/vgp_footer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_footer"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/vgp_center">
+
+        <Button android:id="@+id/btn_friends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_friends"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" />
+
+        <Button android:id="@+id/btn_enemies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_enemies"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+</RelativeLayout>
+
+

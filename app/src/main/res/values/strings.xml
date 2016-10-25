@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BaiduMap</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <item name="Tag_1" type="id"></item>
+    <item name="Tag_2" type="id"></item>
+</resources>
